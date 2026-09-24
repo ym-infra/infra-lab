@@ -1,6 +1,6 @@
 # Zabbix Web UI
 
-構築手順は [Zabbix 構築（AlmaLinux 9 / Zabbix 7.0 LTS）](./zabbix-almalinux9-setup.md) を参照。
+構築手順は [Zabbix 構築（AlmaLinux 9 / Zabbix 7.0 LTS）](./setup.md) を参照。
 
 ## 1. 設定ファイルと Web UI の分担
 
