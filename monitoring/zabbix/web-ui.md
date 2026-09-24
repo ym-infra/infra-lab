@@ -1,5 +1,7 @@
 # Zabbix Web UI
 
+構築手順は [Zabbix 構築（AlmaLinux 9 / Zabbix 7.0 LTS）](./zabbix-setup.md) を参照。
+
 ## 1. 設定ファイルと Web UI の分担
 
 Zabbix では、**設定ファイルはデーモンの動作のみを規定し、監視の内容はすべて Web UI（実体はデータベース）で設定する**。
@@ -60,6 +62,18 @@ Zabbix では、**設定ファイルはデーモンの動作のみを規定し�
 **監視対象を増やす** ―― `Data collection → Hosts` → `Create host`
 
 設定するのは4項目。Host name（エージェント側の `Hostname` と一致させる）、Templates、Host groups、Interfaces（IP とポート 10050）。
+
+Host groups は必須項目なので未入力だとエラーで止まるが、**Templates は任意項目なので黙って登録が通る**。その結果「ホストは作れたのに値が入らない」となるのが定番の失敗である。
+
+付け忘れは一覧画面で判別できる。
+
+| 状態 | テンプレートあり | テンプレートなし |
+| --- | --- | --- |
+| Tags | `class: os` などが自動で付く | 空 |
+| Graphs / Dashboards | 件数付きのリンク | 灰色 |
+| ZBX | 緑 | 灰色のまま |
+
+テンプレートを後から追加する場合は、ホスト名をクリックして設定画面を開き、`Templates` 欄に入力して `Update` する。保存した時点でアイテム・トリガー・グラフがそのホストにコピーされる。
 
 **しきい値を変える** ―― `Data collection → Hosts` → 対象の `Triggers`
 
