@@ -1,6 +1,6 @@
 # Zabbix トラブルシューティング
 
-構築手順は [Zabbix 構築（AlmaLinux 9 / Zabbix 7.0 LTS）](./zabbix-setup.md)、Web UI の操作は [Zabbix Web UI](./zabbix-webui.md) を参照。
+構築手順は [Zabbix 構築（AlmaLinux 9 / Zabbix 7.0 LTS）](./setup.md)、Web UI の操作は [Zabbix Web UI](./webui.md) を参照。
 
 ## 1. Amazon Linux 2023 では Zabbix Server を構築できない
 
