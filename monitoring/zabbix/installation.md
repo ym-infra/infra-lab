@@ -271,23 +271,14 @@ curl -sI -4 http://127.0.0.1/
 http://<ZABBIX_SERVER_IP>/
 ```
 
-  ----------------------------------------------------------------------------------
-  画面                                内容
-  ----------------------------------- ----------------------------------------------
-  Welcome                             表示言語の選択
-
-  Check of pre-requisites             PHP
-                                      のバージョン・拡張・設定値の適合確認。全項目
-                                      OK であること
-
-  Configure DB connection             DB 接続情報を設定
-
-  Settings                            サーバ名、Default time zone（Asia/Tokyo）
-
-  Pre-installation summary            設定内容を確認
-
-  Install                             `/etc/zabbix/web/zabbix.conf.php` が生成される
-  ----------------------------------------------------------------------------------
+| 画面 | 内容 |
+| --- | --- |
+| Welcome | 表示言語の選択 |
+| Check of pre-requisites | PHP のバージョン・拡張・設定値の適合確認。全項目 OK であること |
+| Configure DB connection | DB 接続情報を設定 |
+| Settings | サーバ名、Default time zone（Asia/Tokyo） |
+| Pre-installation summary | 設定内容を確認 |
+| Install | `/etc/zabbix/web/zabbix.conf.php` が生成される |
 
 DB 接続画面で入力するのは **DB の root ではなく `zabbix`
 ユーザー**である。root
