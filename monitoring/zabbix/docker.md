@@ -191,8 +191,3 @@ Container /wp-compose-db-1: Health failing streak
 | DB コンテナの停止 | 変化なし | WordPress が応答しない | **db コンテナが停止** |
 
 外形監視は「WordPress が応答しない」としか言えないが、Docker 監視は原因まで指し示す。層を重ねることで切り分けが速くなる。
-
-## 未実施
-
-- コンテナ停止時のトリガー確認（Docker テンプレートに `Trigger prototypes` として標準で含まれる）
-- MariaDB 監視、ログ監視
